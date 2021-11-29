@@ -2,7 +2,14 @@
 
 function incrementArray(numberArray, arrayLength = null) {
     lastIndex = numberArray.length - 1;
-    numberArray[lastIndex] += 1;
+    if (numberArray[lastIndex] === 9) {
+        numberArray[lastIndex] = 0;
+        numberArray[lastIndex - 1] += 1;
+    }
+    else {
+        numberArray[lastIndex] += 1;
+    }
+
     return numberArray;
 }
 console.log(incrementArray([1]))
