@@ -1,7 +1,8 @@
 // number increment with array representation
 
 function incrementArray(numberArray, arrayLength = null) {
-    numberArray[0] += 1;
+    lastIndex = numberArray.length - 1;
+    numberArray[lastIndex] += 1;
     return numberArray;
 }
 console.log(incrementArray([1]))
