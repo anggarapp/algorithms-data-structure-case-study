@@ -7,6 +7,7 @@ function incrementArray(numberArray, arrayLength = null) {
         numberArray[lastIndex] = 0;
         if (lastIndex <= 0) {
             numberArray.unshift(1);
+            // numberArray = [1, ...numberArray]; // --> why not work?
         }
         else {
             incrementArray(numberArray, lastIndex);
